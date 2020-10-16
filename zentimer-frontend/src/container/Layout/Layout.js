@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import classes from './Layout.module.css';
 import Header from '../../components/Header/Header';
 import Main from '../../components/Main/Main';
+import Footer from '../../components/Footer/Footer';
 
 class Layout extends Component {
   state = {
@@ -16,6 +17,7 @@ class Layout extends Component {
     <div className={classes.Layout}>
       <Header />
       <Main text={this.state.quotes[0]}/>
+      <Footer />
     </div>)
   }
 };
