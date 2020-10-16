@@ -11,11 +11,19 @@
   - [x] 프로세스 정의
   - [x] 화면 정의
 - [x] 개발 시작 10/16 ~ 10/31
-  - [ ] 기본 레이아웃 (10/16)
-    - [ ] Setup folder structure
-    - [ ] Component - Layout
-    - [ ] Component - Navigation
-    - [ ] Component - Header
-    - [ ] Component - Background
-    - [ ] Main text
-    - [ ] Component - Footer
+  - [x] 기본 레이아웃 (10/16)
+    - [x] Setup folder structure
+    - [x] Component - Layout
+    - [x] Component - Navigation
+    - [x] Component - Header
+    - [x] Component - Background
+    - [x] Component - Main(with text)
+    - [x] Component - Footer
+  - [ ] Timer / Tasks (10/17)
+    - [ ] Component - Timer
+    - [ ] Component - Clock
+    - [ ] Component - Button
+    - [ ] Component - Streak
+    - [ ] Component - Tasks
+    - [ ] Component - Task(with dismiss button?)
+    - [ ] Component - Horizontal Spinner
