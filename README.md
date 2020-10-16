@@ -10,4 +10,12 @@
   - [x] 유즈 케이스
   - [x] 프로세스 정의
   - [x] 화면 정의
-- [ ] 개발 시작 10/16 ~ 10/31
+- [x] 개발 시작 10/16 ~ 10/31
+  - [ ] 기본 레이아웃 (10/16)
+    - [ ] Setup folder structure
+    - [ ] Component - Layout
+    - [ ] Component - Navigation
+    - [ ] Component - Header
+    - [ ] Component - Background
+    - [ ] Main text
+    - [ ] Component - Footer
