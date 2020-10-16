@@ -3,7 +3,7 @@ import React from 'react';
 import classes from './NavigationItems.module.css'
 import NavigationItem from './NavigationItem/NavigationItem';
 
-const NavigationItems = (props) => {
+const navigationItems = (props) => {
   return (
     <ul className={classes.NavigationItems}>
       <NavigationItem title="Login" />
@@ -12,4 +12,4 @@ const NavigationItems = (props) => {
   )
 };
 
-export default NavigationItems;
+export default navigationItems;
