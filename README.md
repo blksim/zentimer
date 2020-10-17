@@ -20,9 +20,9 @@
     - [x] Component - Main(with text)
     - [x] Component - Footer
   - [ ] Timer / Tasks (10/17)
-    - [ ] Component - Timer
-    - [ ] Component - Clock
-    - [ ] Component - Button
+    - [x] Component - Timer
+    - [x] Component - Clock
+    - [x] Component - Button
     - [ ] Component - Streak
     - [ ] Component - Tasks
     - [ ] Component - Task(with dismiss button?)
