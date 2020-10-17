@@ -1,0 +1,16 @@
+.Timer {
+  width: 70%;
+  height: 100vh;
+  padding: 2rem;
+  display: flex;
+  border: 1px solid #ffffff;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@media(max-width: 1000px) {
+  .Timer {
+    width: 100%;
+  }
+}
