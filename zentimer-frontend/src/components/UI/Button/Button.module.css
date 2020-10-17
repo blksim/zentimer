@@ -1,0 +1,15 @@
+.Button {
+  width: 7rem;
+  height: 4rem;
+  margin: 1rem;
+  background: none;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.Button:active,
+.Button:hover {
+  background-color: #000000;
+}
