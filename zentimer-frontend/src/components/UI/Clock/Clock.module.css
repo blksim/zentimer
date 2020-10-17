@@ -1,0 +1,16 @@
+.Clock {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-size: 200px;
+}
+
+@media(max-width: 1000px) {
+  .Clock {
+    position: static;
+    transform: translate(0, 0);
+  }
+}
