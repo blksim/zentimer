@@ -23,7 +23,7 @@
     - [x] Component - Timer
     - [x] Component - Clock
     - [x] Component - Button
-    - [ ] Component - Streak
-    - [ ] Component - Tasks
-    - [ ] Component - Task(with dismiss button?)
+    - [x] Component - Streak
+    - [x] Component - Tasks
+    - [x] Component - Task(with dismiss button?)
     - [ ] Component - Horizontal Spinner
