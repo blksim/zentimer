@@ -1,0 +1,32 @@
+.Tasks {
+  width: 30%;
+  height: 80vh;
+  margin: 2rem;
+  padding: 2rem;
+  display: flex;
+  flex-flow: column;
+  justify-content: baseline;
+  align-items: baseline;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.TaskItems {
+  padding: 0;
+}
+
+.Import {
+  color: #ffffff;
+  font-size: small;
+}
+
+.Import:active,
+.Import:hover {
+  color: #9df8f4;
+}
+
+@media(max-width: 1000px) {
+  .Tasks {
+    width: 100%;
+    position: static;
+  }
+}

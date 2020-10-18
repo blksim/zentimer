@@ -4,6 +4,7 @@ import classes from './Layout.module.css';
 import Header from '../../components/Header/Header';
 import Main from '../../components/Main/Main';
 import Timer from '../../components/Timer/Timer';
+import Tasks from '../../components/Tasks/Tasks';
 import Footer from '../../components/Footer/Footer';
 
 class Layout extends Component {
@@ -59,15 +60,22 @@ class Layout extends Component {
   };
 
   render () {
+    const style = {
+      display: 'flex'
+    }
     return (
     <div className={classes.Layout}>
       <Header />
       {/* <Main text={this.state.quotes[0]}/> */}
+      <main style={style}>
       <Timer 
         timeLeft={this.state.timeLeft}
         title={this.state.title}
         streakLeft={this.state.streakLeft}
         streakFinished={this.state.streakFinished}/>
+      <Tasks 
+        title={this.state.title}/>
+      </main>
       <Footer />
     </div>)
   }
