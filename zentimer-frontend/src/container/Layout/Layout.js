@@ -14,6 +14,9 @@ class Layout extends Component {
     focusDuration: 25,
     breakDuration: 5,
     timeLeft: '',
+    streakLeft: 0,
+    streakFinished: 0,
+    title: 'Meditation',
     isFocusMode: false,
     isBreakMode: false,
     isFinished: false,
@@ -60,7 +63,11 @@ class Layout extends Component {
     <div className={classes.Layout}>
       <Header />
       {/* <Main text={this.state.quotes[0]}/> */}
-      <Timer timeLeft={this.state.timeLeft}/>
+      <Timer 
+        timeLeft={this.state.timeLeft}
+        title={this.state.title}
+        streakLeft={this.state.streakLeft}
+        streakFinished={this.state.streakFinished}/>
       <Footer />
     </div>)
   }
