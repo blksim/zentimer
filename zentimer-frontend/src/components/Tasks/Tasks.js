@@ -7,11 +7,7 @@ const tasks = (props) => {
   return (
   <section className={classes.Tasks}>
     <ul className={classes.TaskItems}>
-      <Task title={props.title}/>
-      <Task title={props.title}/>
-      <Task title={props.title}/>
-      <Task title={props.title}/>
-      <Task title={props.title}/>
+      <Task title={props.title} change={props.change}/>
     </ul>
     <a href="#" className={classes.Import}>Import from...</a>
   </section>);

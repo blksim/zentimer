@@ -1,6 +1,9 @@
+.Wrapper {
+  display: flex;
+}
+
 .Task {
-  margin: 1.5rem 0;
-  width: 100%;
+  width: 55%;
   list-style: none;
   text-align: left;
 }
