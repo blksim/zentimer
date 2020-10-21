@@ -6,6 +6,7 @@ import Main from '../../components/Main/Main';
 import Timer from '../../components/Timer/Timer';
 import Tasks from '../../components/Tasks/Tasks';
 import Footer from '../../components/Footer/Footer';
+import axios from 'axios';
 
 class Layout extends Component {
   state = {
@@ -21,6 +22,7 @@ class Layout extends Component {
     isFocusMode: false,
     isBreakMode: false,
     isFinished: false,
+    tasks: []
   };
 
   getZeroPrefixedTime = (time) => {
@@ -56,7 +58,19 @@ class Layout extends Component {
   };
 
   componentDidMount() {
-    this.countdown();
+    //this.countdown();
+    axios.get('https://zentimer-2fbe5.firebaseio.com/tasks.json')
+      .then((res) => {
+        const tasks = [];
+        for (const key in res.data) {
+          res.data[key].id = key;
+          tasks.push(res.data[key]);
+        }
+        this.setState({ tasks: tasks })
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   };
 
   render () {
@@ -74,7 +88,11 @@ class Layout extends Component {
         streakLeft={this.state.streakLeft}
         streakFinished={this.state.streakFinished}/>
       <Tasks 
-        title={this.state.title}/>
+        title={this.state.title}
+        focusDuration={this.state.focusDuration}
+        breakDuration={this.state.breakDuration}
+        tasks={this.state.tasks}
+      />
       </main>
       <Footer />
     </div>)
