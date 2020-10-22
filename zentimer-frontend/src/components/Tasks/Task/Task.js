@@ -8,20 +8,20 @@ const task = (props) => {
 
   if (props.type === 'new') {
     elements = (<div className={classes.Wrapper}>
-      <input className={classes.Task} onChange={props.title} />
+      <input className={classes.Task} onChange={props.titleChange} />
       <HoritzontalSpinner
         minus={props.minus} 
         plus={props.plus}
         value={props.value}
       />
-      <button className={classes.Button} onClick={props.save}>&#10004;</button>
+      <button className={classes.Button} onClick={props.saveClick}>&#10004;</button>
     </div>
     )
   } else {
     elements = (<div className={classes.Wrapper}>
       <input 
         className={classes.Task} 
-        defaultValue={props.title} 
+        value={props.title} 
         onChange={props.change}/>
       <HoritzontalSpinner 
         minus={props.minus} 
