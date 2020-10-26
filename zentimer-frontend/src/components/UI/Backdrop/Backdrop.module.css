@@ -1,0 +1,11 @@
+.Backdrop {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background: #000000cc;
+  z-index: -1;
+}
+
+.Active {
+  z-index: 10;
+}
