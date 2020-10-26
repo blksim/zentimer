@@ -19,11 +19,18 @@
     - [x] Component - Background
     - [x] Component - Main(with text)
     - [x] Component - Footer
-  - [ ] Timer / Tasks (10/17)
+  - [x] Timer / Tasks (10/17)
     - [x] Component - Timer
     - [x] Component - Clock
     - [x] Component - Button
     - [x] Component - Streak
     - [x] Component - Tasks
-    - [x] Component - Task(with dismiss button?)
-    - [ ] Component - Horizontal Spinner
+    - [x] Component - Task
+    - [x] Component - Horizontal Spinner
+  - [ ] Modal, Stat (10/26)
+    - [ ] Component - Login / Signup
+    - [ ] Component - Settings
+    - [ ] Component - Vertical Spinner
+    - [ ] Component - Chart
+    - [ ] Component - Graph
+    - [ ] Component - Report
