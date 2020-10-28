@@ -3,13 +3,17 @@ import React from 'react';
 import classes from './NavigationItems.module.css'
 import NavigationItem from './NavigationItem/NavigationItem';
 
-const navigationItems = (props) => {
-  return (
+const navigationItems = (props) => (
     <ul className={classes.NavigationItems}>
-      <NavigationItem title="Login" />
-      <NavigationItem title="Signup" />
+      { props.navs.map((nav, index) => {
+          return <NavigationItem 
+            key={index} 
+            title={nav} 
+            click={props.click}
+            />
+        })
+      }
     </ul>
-  )
-};
+);
 
 export default navigationItems;

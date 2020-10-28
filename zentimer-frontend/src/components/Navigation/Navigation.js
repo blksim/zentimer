@@ -6,7 +6,7 @@ import NavigationItems from './NavigationItems/NavigationItems';
 const navigation = (props) => {
   return (
     <nav className={classes.Navigation}>
-      <NavigationItems />
+      <NavigationItems click={props.click} navs={props.navs}/>
     </nav>
   );
 };
