@@ -28,9 +28,14 @@
     - [x] Component - Task
     - [x] Component - Horizontal Spinner
   - [ ] Modal, Stat (10/26)
-    - [ ] Component - Login / Signup
-    - [ ] Component - Settings
-    - [ ] Component - Vertical Spinner
+    - [x] Component - Login / Signup
+    - [x] Component - Settings
+    - [x] Component - Vertical Spinner
     - [ ] Component - Chart
     - [ ] Component - Graph
     - [ ] Component - Report
+  - [ ] Backend (11/8)
+    - [x] Setup
+    - [ ] User CRUD
+    - [ ] Task CRUD
+    - [ ] Authenticate
