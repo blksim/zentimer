@@ -1,14 +1,21 @@
 import React from 'react';
 
 import classes from './Header.module.css';
-import Navigation from '../Navigation/Navigation';
+import { Link } from '@reach/router';
 
 const header = (props) => {
-  return (
-    <header className={classes.Header}>
-      <Navigation click={props.click} navs={props.navs}/>
-    </header>
-  );
+  let elements = null;
+  
+  if (props.auth) {
+    elements = (<nav className={classes.Navigation}>
+      <Link className={classes.NavigationLink} to="/stat">stat</Link>
+      <Link className={classes.NavigationLink} to="/signup">logout</Link></nav>); 
+  } else {
+    elements = (<nav className={classes.Navigation}>
+      <Link className={classes.NavigationLink} to="/login">login</Link>
+      <Link className={classes.NavigationLink} to="/signup">signup</Link></nav>);
+  }
+  return <header className={classes.Header}>{elements}</header>;  
 };
 
 export default header;

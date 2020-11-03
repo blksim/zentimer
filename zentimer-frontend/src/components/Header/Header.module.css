@@ -5,3 +5,21 @@
   width: 100%;
   height: 100px;
 }
+
+.Navigation {
+  position: absolute;
+  top: 25%;
+  right: 0;
+  padding: 0 10px;
+}
+
+.NavigationLink {
+  color: white;
+  text-decoration-line: none;
+  margin: 1rem;
+}
+
+.NavigationLink:hover,
+.NavigationLink:active {
+  color: #9df8f4;
+}
