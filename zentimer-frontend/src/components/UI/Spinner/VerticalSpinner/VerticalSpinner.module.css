@@ -1,0 +1,39 @@
+.Wrapper {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.Value {
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  margin: 0;
+  padding: 1px;
+  border: 1px solid #000;
+  text-align: center;
+}
+
+.ButtonWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.Button {
+  width: 30px;
+  height: 15px;
+  margin: 2px;
+  border: 1px solid #000;
+  border-radius: 0;
+  background-color: #fff;
+  line-height: 12px;
+}
+
+.Button:hover {
+  cursor: pointer;
+  background-color: #000;
+  color: #fff;
+}
+

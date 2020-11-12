@@ -5,7 +5,7 @@ import classes from './Footer.module.css';
 const footer = (props) => {
   return (
   <footer className={classes.Footer}>
-    <small className={classes.Copyright}>©2020 Blake Sim</small>
+    <small>©2020 Blake Sim</small>
     </footer>
   );
 };

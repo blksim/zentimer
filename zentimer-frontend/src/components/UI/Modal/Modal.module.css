@@ -4,10 +4,15 @@
   left: 50%;
   padding: 1.5rem;
   transform: translate(-50%, -50%);
-  height: 300px;
-  width: 500px;
+  height: 33rem;
+  width: 30rem;
   background-color: #ffffff;
-  z-index: -1;
+  z-index: 3;
+}
+
+.Title {
+  margin-top: 0;
+  color: #000000;
 }
 
 .Close {
@@ -15,15 +20,7 @@
   width: 30px;
   height: 30px;
   position: relative;
-}
-
-.Close:after {
-  position: absolute;
-  right: 0.5rem;
-  height: 30px;
-  content: '';
-  border-right: 2px solid #000;
-  transform: rotate(45deg);
+  cursor: pointer;
 }
 
 .Close:before {
@@ -35,15 +32,15 @@
   transform: rotate(-45deg);
 }
 
-.Close:hover {
-  cursor: pointer;
+.Close:after {
+  position: absolute;
+  right: 0.5rem;
+  height: 30px;
+  content: '';
+  border-right: 2px solid #000;
+  transform: rotate(45deg);
 }
 
-.Title {
-  margin-top: 0;
-  color: #000000;
-}
-
-.Active {
-  z-index: 2;
+.Settings {
+  height: 30rem;
 }

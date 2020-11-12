@@ -1,37 +1,34 @@
 import React from 'react';
 
 import { GoogleLogin } from 'react-google-login';
-import { refreshTokenSetup } from '../../../../shared/refreshTokenSetup';
 import { GOOGLE_CLIENT_ID } from '../../../../shared/clientId';
-import { navigate } from '@reach/router';
 import classes from './Auth.module.css';
 
-const Login = () => {
-  const onSuccess = (res) => {
-    console.log('[Login Success] currentUser:', res.profileObj);
-    localStorage.setItem('id_token', res.profileObj.googleId);
-
-    refreshTokenSetup(res);
-  };
-
-  const onFailure = (res) => {
-    console.log('[Login failed] res:', res);
-  };
-
-  return (
-    <GoogleLogin
-        clientId={GOOGLE_CLIENT_ID}
-        buttonText="Login with Google"
-        onSuccess={onSuccess}
-        onFailure={onFailure}
-        cookiePolicy={'single_host_origin'}
-        style={{ marginTop: '100px' }}
-        isSignedIn={true}
-      />
-  )
-}
+import { refreshTokenSetup } from '../../../../shared/refreshTokenSetup';
+import { navigate } from '@reach/router';
 
 const auth = (props) => {
+  const googleLoginSuccess = (res) => {
+      localStorage.setItem('id_token', res.tokenId);
+      refreshTokenSetup(res);
+      navigate('/');
+  };
+  
+  const googleLoginFailure = (res) => {
+      console.log('[Login failed] res:', res);
+  };
+  const googleLogin = (<GoogleLogin
+    clientId={GOOGLE_CLIENT_ID}
+    onSuccess={props.onSuccess}
+    onFailure={props.onFailure}
+   // onSuccess={googleLoginSuccess}
+   // onFailure={googleLoginFailure}
+    cookiePolicy={'single_host_origin'}
+    buttonText="Login with Google"
+    style={{ marginTop: '100px', width: '100%' }}
+    isSignedIn={false}
+  />);
+
   return (
     <form onSubmit={props.submit}>
       {props.fields.map((field, index) => {
@@ -55,7 +52,7 @@ const auth = (props) => {
         className={classes.Button} 
         type="submit"
         disabled={!props.valid}>Submit</button>
-      {props.type === 'login' ? <Login /> : null }
+      {props.type === 'login' ? googleLogin : null }
     </form>
   );
 };
