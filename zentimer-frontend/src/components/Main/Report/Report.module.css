@@ -1,0 +1,13 @@
+.Report {
+  margin-top: 1.5rem;
+}
+
+.Share {
+  text-decoration: underline;
+  cursor: pointer;
+  color: #9df8f4;
+}
+
+.Share:hover {
+  color: #fff;
+}

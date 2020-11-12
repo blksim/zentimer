@@ -1,0 +1,60 @@
+section {
+  position: relative;
+}
+
+select {
+  padding: 0.2rem;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  border: 1px solid #fff;
+  background: transparent;
+  color: #fff;
+  z-index: 2;
+}
+
+option {
+  color: #000;
+}
+
+.chart {
+  border: 1px solid #fff;
+  transform: rotate(180deg);
+}
+
+.title {
+  font-size: 1.4em;
+  font-weight: 300;
+}
+
+.bar-group .name-label {
+  text-anchor: middle;
+  fill:#000;
+  font-weight: 600;
+  font-size: 0.7em;
+  transform: rotate(180deg);
+}
+
+.bar-group .value-label {
+  text-anchor: middle;
+  fill: #fff;
+  font-weight: 300;
+  font-size: 0.7em;
+  transform: rotate(180deg);
+}
+
+.container:hover .bar-group {
+  opacity: 0.3;
+}
+
+.container .bar-group:hover {
+  opacity: 1;
+}
+
+.container .bar-group:hover .name-label {
+  font-weight: 400;
+}
+
+.container .bar-group:hover .value-label {
+  font-size: 0.9em;
+}

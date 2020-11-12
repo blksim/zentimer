@@ -30,7 +30,7 @@ const Tasks = (props) => {
         />)})
       }
       </ul>
-      <a href="#" className={classes.Import}>Import from...</a>
+      <button className={classes.Import} onClick={props.import}>Import from...</button>
     </section>
   );
 };

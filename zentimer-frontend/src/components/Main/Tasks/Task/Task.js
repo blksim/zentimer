@@ -1,7 +1,7 @@
 import React from 'react';
 
 import classes from './Task.module.css';
-import HoritzontalSpinner from '../../UI/Spinner/HorizontalSpinner/HorizontalSpinner';
+import HoritzontalSpinner from '../../../UI/Spinner/HorizontalSpinner/HorizontalSpinner';
 
 const task = (props) => {
   let elements = '';
