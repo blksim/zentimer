@@ -9,15 +9,6 @@
   text-align: center;
 }
 
-.TimerWrapper {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
 .Paragraph {
   width: 50vw;
   font-family: 'Permanent Marker', cursive;

@@ -1,7 +1,7 @@
 import React from 'react';
 
 import classes from './Timer.module.css';
-import Button from '../../UI/Button/Button';
+import Button from '../../../UI/Button/Button';
 import { Link } from '@reach/router';
 
 const timer = (props) => {
