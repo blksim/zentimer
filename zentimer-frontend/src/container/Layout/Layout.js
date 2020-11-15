@@ -11,25 +11,42 @@ import { Router } from '@reach/router';
 class Layout extends Component {
   state = {
     nav: '',
+    isModal: false,
     isAuthenticated: false,
-    isOauth: ''
+    isOauth: false
   };
 
   navHandler = (event) => {
-    this.setState({ nav: event.target.text })
+    this.setState({ isModal: true, nav: '/' + event.target.text })
+  };
+  
+  logoutHandler = () => {
+    console.log('logout');
+    localStorage.removeItem('token');
+    this.setState({ isAuthenticated: false });
   };
 
+  componentDidMount() {
+    console.log('componentDidMount');
+    localStorage.getItem('token') 
+    ? this.setState({ isAuthenticated: true }) 
+    : this.setState({ isAuthenticated: false });
+  }
+
   render () {
+    const modal = this.state.isModal ? <Modal path={this.state.nav} /> : null;
+    
     return (
     <div className={classes.Layout}>
-      <Header
-        auth={this.state.isAuthenticated}
+      <Header 
+        isAuth={this.state.isAuthenticated} 
         click={(event) => this.navHandler(event)}
+        logout={() => this.logoutHandler()}
       />
       <Router>
-        <Modal path={"/" + this.state.nav} />
-        <Main path={this.state.isAuthenticated ? '/tasks' : '/'}/>
-      </Router> 
+        {modal}
+      </Router>
+        <Main isAuth={this.state.isAuthenticated} />
       <Footer />
     </div>
     )
