@@ -1,0 +1,4 @@
+package-lock.json
+zentimer-frontend/debug.log
+node_modules/
+zentimer-frontend/src/shared/clientId.js

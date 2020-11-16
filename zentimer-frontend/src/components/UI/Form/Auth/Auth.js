@@ -5,7 +5,7 @@ import { GoogleLogin } from 'react-google-login';
 import { GOOGLE_CLIENT_ID } from '../../../../shared/clientId';
 import { refreshTokenSetup } from '../../../../shared/refreshTokenSetup';
 import axios from 'axios';
-import { navigate } from '@reach/router';
+import { navigate } from '@reach/router'; 
 
 const Auth = (props) => {
   const [auth, setAuth] = useState({
@@ -46,6 +46,14 @@ const Auth = (props) => {
     }
   }
 
+  const submitHandler = (event) => {
+    event.preventDefault();
+    let type = event.target.baseURI.split('/')[3];
+    
+    if (type === 'signup') signupHandler(event);
+    if (type === 'login') loginHandler(event)
+  };
+
   const loginHandler = async event => {
     event.preventDefault();
     axios.post('http://localhost:3001/login', { email: auth.email.value, password: auth.password.value })
@@ -58,10 +66,22 @@ const Auth = (props) => {
       });
   };
 
+  const signupHandler = event =>{
+    event.preventDefault();
+    axios.post('http://localhost:3001/signup', { email: auth.email.value, password: auth.password.value })
+      .then(res => {
+        alert(res.data.message);
+        navigate('/');
+      })
+      .catch(async err => {
+        await setAuth({ ...auth, result: err.response.data.error });
+      });
+  };
+
   const googleLoginSuccess = (res) => {
       localStorage.setItem('token', res.tokenId);
       refreshTokenSetup(res);
-      window.location.reload();
+      window.location.reload('/');
   };
   
   const googleLoginFailure = (res) => {
@@ -79,7 +99,7 @@ const Auth = (props) => {
   />;
 
   return (
-    <form onSubmit={(event) => loginHandler(event)}>
+    <form onSubmit={(event) => submitHandler(event)}>
       {props.fields.map((field, index) => {
         return (
         <div key={index}>

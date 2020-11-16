@@ -28,9 +28,16 @@ class Layout extends Component {
 
   componentDidMount() {
     console.log('componentDidMount');
+    let token = window.location.href.split('/r/')[1];
+    if (token) localStorage.setItem('token', token);
+    
     localStorage.getItem('token') 
     ? this.setState({ isAuthenticated: true }) 
     : this.setState({ isAuthenticated: false });
+  }
+
+  componentDidUpdate() {
+    console.log('componentDidUpdate');
   }
 
   render () {
@@ -46,7 +53,7 @@ class Layout extends Component {
       <Router>
         {modal}
       </Router>
-        <Main isAuth={this.state.isAuthenticated} />
+        <Main isAuth={this.state.isAuthenticated}/>
       <Footer />
     </div>
     )
